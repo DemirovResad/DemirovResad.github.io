@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rashad Damirov | AI/ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="AI/ML and data engineering: LLM evaluation, RAG, agents, voice pipelines.">
+  <meta name="author" content="Rashad Damirov">
+  <meta name="theme-color" content="#101010">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Link preview (LinkedIn, Telegram, WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rashad Damirov | AI/ML Engineer">
+  <meta property="og:description" content="LLM agents, RAG/GraphRAG and evaluation pipelines, with a focus on the Azerbaijani language.">
+  <meta property="og:locale" content="en_US">
+  <!-- Add after you host the site:
+  <link rel="canonical" href="https://YOUR-SITE/">
+  <meta property="og:url" content="https://YOUR-SITE/">
+  <meta property="og:image" content="https://YOUR-SITE/preview.png"> -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101010'/%3E%3Ctext x='32' y='43' font-family='sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='%2358b868'%3ERD%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --bg: #101010;
+      --card: #1a1a1a;
+      --line: #2e2e2e;
+      --ink: #f2f2f2;
+      --muted: #a8a8a8;
+      --green: #58b868;
+      --green-fill: #2f7d3b;
+      --grey: #8d97a5;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: 1rem; line-height: 1.6;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    a { color: var(--green); }
+    a:focus-visible, .btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    .skip-link { position: absolute; left: 16px; top: -48px; padding: 8px 12px; background: var(--green-fill); color: #fff; }
+    .skip-link:focus { top: 12px; }
+
+    /* hero */
+    .hero { padding: 72px 0 56px; }
+    .hero h1 { margin: 0 0 24px; color: var(--green); font-size: clamp(2.6rem, 8vw, 4.2rem); line-height: 1.05; letter-spacing: -.02em; }
+    .btn {
+      display: inline-block; padding: 8px 18px; background: var(--green-fill); color: #fff;
+      border-radius: 6px; text-decoration: none; font-weight: 600; font-size: .95rem;
+    }
+    .btn:hover { background: #3a9448; }
+
+    /* section titles with left bar */
+    h2 { margin: 0 0 20px; padding-left: 12px; border-left: 3px solid var(--green); font-size: 1.15rem; line-height: 1.2; }
+    section { padding: 40px 0; border-top: 1px solid var(--line); scroll-margin-top: 8px; }
+
+    .about p { margin: 0 0 14px; max-width: 38em; }
+    .about p:last-child { margin-bottom: 0; }
+
+    /* skill cards */
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+    .skill { padding: 18px; border-radius: 10px; background: var(--grey); color: #101010; }
+    .skill:first-child { background: var(--green-fill); color: #fff; }
+    .skill h3 { margin: 0 0 8px; font-size: .95rem; }
+    .skill p { margin: 0; font-size: .9rem; }
+
+    /* project cards */
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .project { display: flex; flex-direction: column; padding: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+    .project h3 { margin: 0 0 10px; font-size: 1.05rem; }
+    .project p { margin: 0 0 10px; font-size: .95rem; color: var(--muted); }
+    .project .stack { color: var(--green); font-size: .9rem; }
+    .project .btn { align-self: flex-start; margin-top: auto; }
+
+    /* outlined boxes */
+    .boxes { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+    .box { padding: 16px 18px; border: 1px solid var(--ink); border-radius: 8px; }
+    .box h3 { margin: 0 0 2px; font-size: .98rem; }
+    .box p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+    /* contact */
+    .contact { padding: 22px; background: var(--green-fill); border-radius: 10px; }
+    .contact ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 28px; }
+    .contact a { color: #fff; font-weight: 600; }
+
+    footer { padding: 24px 0 56px; color: var(--muted); font-size: .9rem; }
+    footer p { margin: 0; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 44px 0 36px; }
+      .projects { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1>Rashad Damirov</h1>
+      <a class="btn" href="#projects">View projects</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section id="about">
+        <h2>About me</h2>
+        <div class="about">
+          <p>Data Scientist and AI Engineer with hands-on experience in NLP, LLM fine-tuning, and end-to-end AI pipeline development, including STT/TTS benchmarking and OCR systems. Proficient in Python and deep learning frameworks, with practical expertise in LangChain, LangGraph, and Langfuse for building and evaluating LLM-powered applications and agentic workflows.</p>
+          <p>Recent work includes benchmarking LLMs on Azerbaijani language understanding, a low-latency real-time STT-LLM-TTS voice pipeline, a GraphRAG agent over the Constitution, and a SQL agent for a banking database.</p>
+          <p>Driven by a passion for advancing Azerbaijani language technology through applied research and real-world solutions.</p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Key skills</h2>
+        <div class="skills">
+          <div class="skill"><h3>LLMs and agents</h3><p>LLM, RAG, LangChain, LangGraph, Langfuse</p></div>
+          <div class="skill"><h3>ML and NLP</h3><p>Python, PyTorch, TensorFlow, NLP, Machine Learning, Deep Learning, OCR</p></div>
+          <div class="skill"><h3>Data</h3><p>Oracle SQL, SQLite, Data Cleaning, Feature Engineering, Statistics, Visualization</p></div>
+          <div class="skill"><h3>Applications</h3><p>FastAPI, Streamlit</p></div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+        <article class="project">
+          <h3>Az-Constitution-GraphRAG</h3>
+          <p>GraphRAG agent over the Constitution of Azerbaijan: entity and relation extraction, local and global search, FastAPI and LibreChat integration, evaluation with Langfuse.</p>
+          <p class="stack">Python, GraphRAG, FastAPI, LibreChat, Langfuse</p>
+          <a class="btn" href="https://github.com/DemirovResad/Az-Constitution-Graphrag" target="_blank" rel="noopener noreferrer" aria-label="Az-Constitution-GraphRAG: view on GitHub">View on GitHub</a>
+        </article>
+        <article class="project">
+          <h3>Bank SQL Assistant</h3>
+          <p>Agentic SQL assistant for a bank SQLite database: turns natural language into SQL, knows the schema, runs with read-only access and retries automatically on errors.</p>
+          <p class="stack">Python, LangChain Deep Agents, Gemini, SQLite</p>
+          <a class="btn" href="https://github.com/DemirovResad/Bank_SQL_Assistant" target="_blank" rel="noopener noreferrer" aria-label="Bank SQL Assistant: view on GitHub">View on GitHub</a>
+        </article>
+        <article class="project">
+          <h3>News Intelligence Agent</h3>
+          <p>LangGraph agent that collects the latest news about a company and builds a structured company profile. Includes a Streamlit interface and Langfuse tracing.</p>
+          <p class="stack">Python, LangGraph, Tavily, Streamlit, Langfuse</p>
+          <a class="btn" href="https://github.com/DemirovResad/News-Intelligence-Agent" target="_blank" rel="noopener noreferrer" aria-label="News Intelligence Agent: view on GitHub">View on GitHub</a>
+        </article>
+        <article class="project">
+          <h3>CV Scanner Agent</h3>
+          <p>Automated CV screening: evaluates skills with an LLM, reads PDF, DOCX and image (OCR) files, and lets you configure job requirements.</p>
+          <p class="stack">Python, LangChain, OCR, Streamlit</p>
+          <a class="btn" href="https://github.com/DemirovResad/CV-Scanner-Agent" target="_blank" rel="noopener noreferrer" aria-label="CV Scanner Agent: view on GitHub">View on GitHub</a>
+        </article>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education and languages</h2>
+        <div class="boxes">
+          <div class="box"><h3>Master's, Computer Science</h3><p>Azerbaijan State University of Economics, 2022 - 2024</p></div>
+          <div class="box"><h3>Bachelor's, Computer Engineering</h3><p>Azerbaijan State Oil and Industry University, 2018 - 2022</p></div>
+          <div class="box"><h3>AI Engineering course (certificate)</h3><p>Alas Academy, 2023 - 2024</p></div>
+          <div class="box"><h3>Languages</h3><p>Azerbaijani (native), English (intermediate)</p></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact me</h2>
+        <div class="contact">
+          <ul>
+            <li><a href="mailto:demirovresad0@gmail.com">demirovresad0@gmail.com</a></li>
+            <li><a href="https://github.com/DemirovResad" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/resad-demirov" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap"><p>&copy; 2026 Rashad Damirov</p></div>
+  </footer>
+</body>
+</html>

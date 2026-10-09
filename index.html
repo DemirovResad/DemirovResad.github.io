@@ -49,7 +49,7 @@
 
     /* hero */
     .hero { padding: 72px 0 56px; }
-    .hero h1 { margin: 0 0 24px; color: var(--green); font-size: clamp(2.6rem, 8vw, 4.2rem); line-height: 1.05; letter-spacing: -.02em; }
+    .hero h1 { margin: 0 0 24px; color: var(--green); font-size: clamp(2.4rem, 6vw, 3.8rem); line-height: 1.05; letter-spacing: -.02em; }
     .btn {
       display: inline-block; padding: 8px 18px; background: var(--green-fill); color: #fff;
       border-radius: 6px; text-decoration: none; font-weight: 600; font-size: .95rem;
@@ -60,8 +60,9 @@
     h2 { margin: 0 0 20px; padding-left: 12px; border-left: 3px solid var(--green); font-size: 1.15rem; line-height: 1.2; }
     section { padding: 40px 0; border-top: 1px solid var(--line); scroll-margin-top: 8px; }
 
-    .about p { margin: 0 0 14px; max-width: 38em; }
-    .about p:last-child { margin-bottom: 0; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; align-items: center; }
+    .about h2 { margin-bottom: 14px; }
+    .about p { margin: 0; color: var(--muted); max-width: 30em; }
 
     /* experience cards */
     .jobs { display: grid; gap: 16px; }
@@ -103,6 +104,7 @@
     @media (max-width: 640px) {
       .hero { padding: 44px 0 36px; }
       .projects { grid-template-columns: 1fr; }
+      .hero-grid { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
@@ -111,22 +113,20 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="hero">
-    <div class="wrap">
-      <h1>Rashad Damirov</h1>
-      <a class="btn" href="#projects">View projects</a>
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Rashad Damirov</h1>
+        <a class="btn" href="#projects">View projects</a>
+      </div>
+      <div class="about" id="about">
+        <h2>About me</h2>
+        <p>Data Scientist and AI Engineer with hands-on experience in NLP, LLM fine-tuning, and end-to-end AI pipeline development, including STT/TTS benchmarking and OCR systems. Proficient in Python and deep learning frameworks, with practical expertise in LangChain, LangGraph, and Langfuse for building and evaluating LLM-powered applications and agentic workflows. Driven by a passion for advancing Azerbaijani language technology through applied research and real-world solutions.  </p>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <div class="wrap">
-      <section id="about">
-        <h2>About me</h2>
-        <div class="about">
-          <p>Data Scientist and AI Engineer with hands-on experience in NLP, LLM fine-tuning, and end-to-end AI pipeline development, including STT/TTS benchmarking and OCR systems. Proficient in Python and deep learning frameworks, with practical expertise in LangChain, LangGraph, and Langfuse for building and evaluating LLM-powered applications and agentic workflows.</p>
-          <p>Recent work includes benchmarking LLMs on Azerbaijani language understanding, a low-latency real-time STT-LLM-TTS voice pipeline, a GraphRAG agent over the Constitution, and a SQL agent for a banking database.</p>
-          <p>Driven by a passion for advancing Azerbaijani language technology through applied research and real-world solutions.</p>
-        </div>
-      </section>
 
       <section id="skills">
         <h2>Key skills</h2>
